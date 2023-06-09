@@ -1,0 +1,21 @@
+{
+  "name": "olx-clone",
+  "version": "1.0.0",
+  "description": "Olx clone using reactjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --port 3005",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Advi729/olx-clone.git"
+  },
+  "author": "Adal Adwaid Vikas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Advi729/olx-clone/issues"
+  },
+  "homepage": "https://github.com/Advi729/olx-clone#readme"
+}
