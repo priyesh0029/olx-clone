@@ -4,10 +4,15 @@ import Heart from '../../assets/Heart';
 import bikeImg from '../../../public/Images/R15V3.jpg';
 import { FirebaseContext } from '../../store/Context';
 import { collection, getDocs } from 'firebase/firestore';
+import { PostContext } from '../../store/PostContext';
+import { useNavigate } from 'react-router-dom';
 
 function Posts() {
   const {db} = useContext(FirebaseContext);
   const [products, setProducts] = useState([]);
+  const {setPostDetails} = useContext(PostContext);
+  const navigate = useNavigate();
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -38,6 +43,11 @@ function Posts() {
             return (
             <div
               className="card"
+              key={product.id}
+              onClick={() => {
+                setPostDetails(product)
+                navigate('/view-post');
+              }}
             >
               <div className="favorite">
                 <Heart></Heart>

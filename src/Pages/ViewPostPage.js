@@ -1,7 +1,7 @@
 import Header from "../Components/Header/Header";
 import ViewPost from "../Components/ViewPost/ViewPost";
 
-function ViewPostPage() {
+function ViewPostPage(props) {
     return (
         <div>
             <Header />

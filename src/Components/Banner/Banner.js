@@ -1,4 +1,5 @@
 import React from 'react';
+import './Banner.css';
 import Arrow from '../../assets/Arrow';
 import bannerImgSrc from '../../../public/Images/banner copy.png'
 
