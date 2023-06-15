@@ -8,6 +8,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import CreatePage from './Pages/CreatePage';
 import ViewPostPage from './Pages/ViewPostPage';
 import Post from './store/PostContext';
+import Error from './Components/Error/Error';
 
 function App() {
   const { user, setUser } = useContext(AuthContext);
@@ -22,7 +23,7 @@ function App() {
     <Post>
       <Router>
           <Routes>
-          <Route exact path='/' element={<Home/>} />
+          <Route exact path='/' element={<Home/>} errorElement={<Error/>}/>
           <Route path='/signup' element={<SignUpPage/>} />
           <Route path='/login' element={<LogInPage/>} />
           <Route path='/create' element={<CreatePage/>} />

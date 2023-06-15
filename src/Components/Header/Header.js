@@ -6,7 +6,7 @@ import Arrow from '../../assets/Arrow';
 import SellButton from '../../assets/SellButton';
 import SellButtonPlus from '../../assets/SellButtonPlus';
 import { AuthContext, FirebaseContext } from '../../store/Context';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 
 function Header() {
@@ -55,16 +55,16 @@ function Header() {
           <Arrow/>
         </div>
         <div className="loginPage">
-          {user ? (<span>Welcome {user?.displayName}</span>) : (<span onClick={handleLogin}>Log In</span>)}
+          {user ? (<span>Welcome {user?.displayName}</span>) : (<Link to='/login'><span onClick={()=>handleLogin}>Log In</span></Link>)}
           <hr />
         </div>
-        {user && <span onClick={handleLogOut}>Log Out</span>}
+        {user && <Link><span onClick={()=>handleLogOut}>Log Out</span></Link>}
         
         <div className="sellMenu">
           <SellButton/>
           <div className="sellMenuContent">
             <SellButtonPlus/>
-            <span onClick={handleCreate}>SELL</span>
+            <Link to='/create'><span onClick={()=>handleCreate}>SELL</span></Link>
           </div>
         </div>
       </div>
