@@ -13,10 +13,11 @@ function Header() {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
   const { auth } = useContext(FirebaseContext);
+  
   const handleLogOut = async() => {
     try {
       await signOut(auth);
-      navigate('/');
+      navigate('/login');
     } catch (error) {
       console.log(error);
       alert(error.message);
@@ -55,16 +56,16 @@ function Header() {
           <Arrow/>
         </div>
         <div className="loginPage">
-          {user ? (<span>Welcome {user?.displayName}</span>) : (<Link to='/login'><span onClick={()=>handleLogin}>Log In</span></Link>)}
+          {user ? (<span>Welcome {user?.displayName}</span>) : (<Link to='/login'><span onClick={()=>handleLogin()}>Log In</span></Link>)}
           <hr />
         </div>
-        {user && <Link><span onClick={()=>handleLogOut}>Log Out</span></Link>}
+        {user && <Link><span onClick={()=>handleLogOut()}>Log Out</span></Link>}
         
         <div className="sellMenu">
           <SellButton/>
           <div className="sellMenuContent">
             <SellButtonPlus/>
-            <Link to='/create'><span onClick={()=>handleCreate}>SELL</span></Link>
+            <Link to='/create'><span onClick={()=>handleCreate()}>SELL</span></Link>
           </div>
         </div>
       </div>

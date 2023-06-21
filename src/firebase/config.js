@@ -3,15 +3,16 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyAen4Q1sXtT9hmt1XXQn1HOl8cS2X6ZBXY",
-    authDomain: "olx-clone-30676.firebaseapp.com",
-    projectId: "olx-clone-30676",
-    storageBucket: "olx-clone-30676.appspot.com",
-    messagingSenderId: "819381089414",
-    appId: "1:819381089414:web:476eff7aca8fb2815d4d07",
-    measurementId: "G-FNRCT3KSSD"
-};
+    apiKey: "AIzaSyDWlUjATI_jSe8xL1R79TWQnwHIuFVwoI4",
+    authDomain: "fir-81741.firebaseapp.com",
+    projectId: "fir-81741",
+    storageBucket: "fir-81741.appspot.com",
+    messagingSenderId: "894225763019",
+    appId: "1:894225763019:web:9c25332e6041eb489fa94e",
+    measurementId: "G-2C1DPEGE35"
+  };
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);

@@ -3,7 +3,7 @@ import './LogIn.css';
 import logo from '../../../public/Images/olx-logo.png';
 import { FirebaseContext } from '../../store/Context';
 import { signInWithEmailAndPassword } from '@firebase/auth';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 
 function LogIn() {
   const navigate = useNavigate();
@@ -60,7 +60,7 @@ function LogIn() {
           <br />
           <button>Login</button>
         </form>
-        <a>Signup</a>
+        <Link to='/signup'>Signup</Link>
       </div>
     </div>
   );

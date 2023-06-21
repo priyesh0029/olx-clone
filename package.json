@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Advi729/olx-clone.git"
+    "url": "https://github.com/priyesh0029/olx-clone.git"
   },
-  "author": "Adal Adwaid Vikas",
+  "author": "Priyesh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Advi729/olx-clone/issues"
+    "url": "https://github.com/priyesh0029/olx-clone/issues"
   },
-  "homepage": "https://github.com/Advi729/olx-clone#readme",
+  "homepage": "https://github.com/priyesh0029/olx-clone#readme",
   "devDependencies": {
     "parcel": "^2.9.2",
     "process": "^0.11.10"
